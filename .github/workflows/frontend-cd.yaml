@@ -80,7 +80,7 @@ jobs:
       - name: Build Docker image
         working-directory: starter/frontend
         env:
-          REACT_APP_MOVIE_API_URL: http://localhost:5000
+          REACT_APP_MOVIE_API_URL: http://a1ffc5979c9a14037aa27f0a6a721fa4-1720610337.us-east-1.elb.amazonaws.com
           ECR_REPOSITORY: ${{ steps.login-ecr.outputs.registry }}/frontend
         run: |
           docker build \
